@@ -8,7 +8,7 @@ namespace BufeSzimulator
     {
         public int Kaloria   { get; set; }
 
-        public Etel(string nev, string ar, int kaloria) : base(nev, ar)
+        public Etel(string nev, int ar, int kaloria) : base(nev, ar)
         {
             Kaloria = kaloria;
         }

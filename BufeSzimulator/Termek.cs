@@ -7,9 +7,9 @@ namespace BufeSzimulator
     public class Termek
     {
         public string Nev { get; set; }
-        public string Ar { get; set; }
+        public int Ar { get; set; }  
 
-        public Termek(string nev, string ar)
+        public Termek(string nev, int ar)  
         {
             Nev = nev;
             Ar = ar;
@@ -18,7 +18,7 @@ namespace BufeSzimulator
         public virtual string Kategoria()
         {
             return "Termék";
-        }   
+        }
 
         public virtual string Reszletek()
         {

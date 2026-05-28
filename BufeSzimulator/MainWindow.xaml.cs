@@ -26,6 +26,8 @@ namespace BufeSzimulator
             vasarlo = new Vasarlo(5000);
 
             AlapTermekekLetrehozasa();
+            TermekListaFrissitese();
+            VasarloAdatokFrissitese();
         }
         public void AlapTermekekLetrehozasa()
         {
@@ -45,6 +47,12 @@ namespace BufeSzimulator
             {
                 lbTermekek.Items.Add(termek);
             }
+        }
+        public void VasarloAdatokFrissitese()
+        {
+            txtPenz.Text = $"Pénz: {vasarlo.Penz} Ft";
+            txtElkoltott.Text = $"Elköltött pénz: {vasarlo.ElkoltottPenz} Ft";
+            txtDarab.Text = $"Vásárlások száma: {vasarlo.Vasarlasok.Count} db";
         }
     }
 }

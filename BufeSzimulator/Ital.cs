@@ -8,7 +8,7 @@ namespace BufeSzimulator
     {
         public int MennyisegMl { get; set; }
 
-        public Ital(string nev, string ar, int mennyisegMl) : base(nev, ar)
+        public Ital(string nev, int ar, int mennyisegMl) : base(nev, ar)
         {
             MennyisegMl = mennyisegMl;
         }
