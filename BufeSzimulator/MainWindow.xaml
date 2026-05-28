@@ -50,7 +50,7 @@
                         <Button Content="Vásárlás"
                                 Width="120"
                                 Height="40"
-                                Margin="0,0,10,0"/>
+                                Margin="0,0,10,0" Click="VasarlasClickButton"/>
 
                         <Button Content="Részletek"
                                 Width="120"

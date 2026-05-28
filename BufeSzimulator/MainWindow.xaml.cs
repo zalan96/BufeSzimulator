@@ -37,7 +37,7 @@ namespace BufeSzimulator
             termekek.Add(new Ital("Kávé", 700, 150));
             termekek.Add(new Ital("Kóla", 600, 500));
             termekek.Add(new Ital("Víz", 500, 500));
-            
+
         }
         public void TermekListaFrissitese()
         {
@@ -53,6 +53,29 @@ namespace BufeSzimulator
             txtPenz.Text = $"Pénz: {vasarlo.Penz} Ft";
             txtElkoltott.Text = $"Elköltött pénz: {vasarlo.ElkoltottPenz} Ft";
             txtDarab.Text = $"Vásárlások száma: {vasarlo.Vasarlasok.Count} db";
+        }
+
+        private void VasarlasClickButton(object sender, RoutedEventArgs e)
+        {
+            if (lbTermekek.SelectedItem == null)
+            {
+                MessageBox.Show("Kérem válasszon egy terméket a listából!", "Figyelem");
+            }
+            else
+            {
+                Termek kivalasztott = (Termek)lbTermekek.SelectedItem;
+
+                if (!vasarlo.TudVasarolni(kivalasztott))
+                {
+                    MessageBox.Show("Nincs elég pénze a vásárláshoz!", "Elitta az összeset, no money");
+
+                }
+                else
+                {
+                    vasarlo.Vasarol(kivalasztott);
+                    VasarloAdatokFrissitese();
+                }
+            }
         }
     }
 }
